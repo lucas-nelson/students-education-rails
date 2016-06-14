@@ -3,7 +3,8 @@ class StudentsController < ApplicationController
   before_action :set_student, only: [:destroy, :show, :update]
 
   def index
-    @students = Student.all
+    # TODO: would be nice to group them into classes
+    @students = Student.order(:name)
   end
 
   def show
