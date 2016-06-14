@@ -1,0 +1,2 @@
+module StudentsHelper # :nodoc:
+end
