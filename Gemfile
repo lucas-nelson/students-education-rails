@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
+# bootstrap_form is a rails form builder that makes it super easy to create beautiful-looking forms using Twitter
+# Bootstrap 3+
+gem 'bootstrap_form', '~> 2.3'
 # bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications.
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.

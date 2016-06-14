@@ -1,0 +1,23 @@
+<h2><%= @student.name %></h2>
+
+<h3><%= t('students.progress') %></h3>
+
+<p><%= render partial: 'application/lesson_part', object: @student.lesson_parts&.last %></p>
+
+<h3><%= t('.set_new_progress') %></h3>
+
+<%# this form is not particularly rails-y, but it's the neatest way to
+    create the join record (a) without maybe creating a LessonPart - we
+    want to be sure to use an existing record, and (b) making it easy to
+    input based on ordinals %>
+<%= bootstrap_form_tag url: student_completed_lesson_parts_path(student_id: @student) do |f| %>
+    <%= f.number_field :lesson_ordinal, label: t('activerecord.attributes.lesson.ordinal'), required: '' %>
+
+    <%= f.number_field :lesson_part_ordinal,
+                       label: t('activerecord.attributes.lesson_part.ordinal'),
+                       min: 1,
+                       max: 3,
+                       required: '' %>
+
+    <%= f.submit class: 'btn btn-primary btn-lg' %>
+<% end %>

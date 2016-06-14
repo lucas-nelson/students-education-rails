@@ -1,0 +1,5 @@
+en:
+  students:
+    completed_lesson_parts:
+      create:
+        notice: New progress saved.

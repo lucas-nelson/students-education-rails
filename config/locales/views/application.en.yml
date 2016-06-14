@@ -1,5 +1,9 @@
 en:
   application:
+    lesson_part:
+      no_progress: No progress
+      progress: Completed up to lesson %{lesson}, part %{lesson_part}
+
     navbar:
       home: Home
       students: Students

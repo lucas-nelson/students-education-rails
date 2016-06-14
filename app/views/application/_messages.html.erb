@@ -1,0 +1,2 @@
+<%= content_tag :div, flash[:notice], class: 'alert alert-success' if flash.key?(:notice) %>
+<%= content_tag :div, flash[:alert], class: 'alert alert-danger' if flash.key?(:alert) %>

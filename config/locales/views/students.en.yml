@@ -1,8 +1,7 @@
 en:
   students:
-    lesson_part:
-      progress: Completed up to lesson %{lesson}, part %{lesson_part}
+    progress: Progress
 
     show:
       email: Email
-      progress: Progress
+      set_progress: Set progress

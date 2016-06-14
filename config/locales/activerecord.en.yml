@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    attributes:
+      lesson:
+        ordinal: Lesson number
+
+      lesson_part:
+        ordinal: Lesson part (between 1 and 3)
