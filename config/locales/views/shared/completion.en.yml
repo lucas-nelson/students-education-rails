@@ -1,0 +1,6 @@
+en:
+  shared:
+    completion:
+      lesson_part:
+        no_progress: No progress
+        progress: Completed up to lesson %{lesson}, part %{lesson_part}

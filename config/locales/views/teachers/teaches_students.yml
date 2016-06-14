@@ -1,0 +1,5 @@
+en:
+  teachers:
+    teaches_students:
+      index:
+        taught_by: Students taught by %{name}

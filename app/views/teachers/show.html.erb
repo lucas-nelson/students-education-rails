@@ -4,3 +4,9 @@
   <dt><%= t('.email') %></dt>
   <dd><%= @teacher.email %></dd>
 </dl>
+
+<div>
+  <%= link_to t('.students_taught'),
+              teacher_teaches_students_path(teacher_id: @teacher),
+              class: 'btn btn-default btn-lg' %>
+</div>

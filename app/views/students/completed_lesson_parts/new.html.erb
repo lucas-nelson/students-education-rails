@@ -2,7 +2,7 @@
 
 <h3><%= t('students.progress') %></h3>
 
-<p><%= render partial: 'application/lesson_part', object: @student.lesson_parts&.last %></p>
+<p><%= render partial: 'shared/completion/lesson_part', object: @student.lesson_parts&.last %></p>
 
 <h3><%= t('.set_new_progress') %></h3>
 
