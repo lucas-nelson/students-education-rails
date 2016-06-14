@@ -1,0 +1,5 @@
+<% if lesson_part %>
+  <%= t('.progress', lesson: lesson_part.lesson.ordinal, lesson_part: lesson_part.ordinal) %>
+<% else %>
+  <%= t('.no_progress') %>
+<% end %>

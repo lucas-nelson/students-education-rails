@@ -1,0 +1,8 @@
+en:
+  students:
+    lesson_part:
+      progress: Completed up to lesson %{lesson}, part %{lesson_part}
+
+    show:
+      email: Email
+      progress: Progress
