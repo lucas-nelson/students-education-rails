@@ -1,24 +1,86 @@
-# README
+# students-education-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A coding challenge to model students, teachers, lessons and students completing lessons in parts.
 
-Things you may want to cover:
+Solution is a web site backed by a Rails server.
 
-* Ruby version
+## The challenge
 
-* System dependencies
+### Coding Project
 
-* Configuration
+_Company X_ is developing a new app for student education. Students complete lessons and their progress is recorded.
+Each lesson has 3 parts - 1, 2 and 3. There are 100 lessons in total.
 
-* Database creation
+#### Part 1
 
-* Database initialization
+Generate a rails app that persists students and their progress.
 
-* How to run the test suite
+Define routes for:
 
-* Services (job queues, cache servers, search engines, etc.)
+1.  setting a student's progress - progress should consist of a lesson and part number.
+2.  returning a JSON representation of a student and their associated progress.
 
-* Deployment instructions
+#### Part 2
 
-* ...
+Teachers have classes containing number of students.
+
+1.  Add a teacher model that is related to students
+2.  Create a reports page for a teacher to view progress all of their students.
+
+#### Part 3
+
+Calculating progress
+
+1. add a method for updating student progress - this should verify that the student is only able to complete the next
+   part number in sequence e.g.
+   L1 P1, L1 P2, L1 P3, L2 P1, L2 P2 etc
+
+## The result
+
+https://students-education-rails.herokuapp.com/
+
+### Part 1 / (1.)
+
+1. Tap `Students` in the top nav
+2. Tap a student in the list
+3. Tap `Set progress`
+4. You can enter a lesson number between 1 and 100 and a part between 1 and 3
+5. Tap Save
+6. Observe the student's progress has been updated
+
+### Part 1 / (2.)
+
+The JSON representation is available in an API version of this app in a different repository. See
+[https://github.com/lucas-nelson/students-education-api/blob/master/USAGE.md#part-1]() for details.
+
+### Part 2 / (1.)
+
+1. Tap `Teachers` in the top nav
+2. Tap a teacher in the list
+3. Tap `Students taught`
+4. Observe a list of students being taught by this teacher
+
+### Part 2 / (2.)
+
+(Solution is on the same page as the prior section)
+
+1. Tap `Teachers` in the top nav
+2. Tap a teacher in the list
+3. Tap `Students taught`
+4. Observe the progress of those students (down the right-hand-side)
+
+### Part 3 / (1.)
+
+(Solution is at the same place as Part 1 / (1.))
+
+1. Tap `Students` in the top nav
+2. Tap a student in the list
+3. Tap `Set progress`
+4. Enter a lesson or part number
+5. Tap Save
+6. Observe an error message
+
+## Further discussion
+
+There's more details of the process I went through in the 'api' repository. Particularly
+[https://github.com/lucas-nelson/students-education-api/blob/master/README.md#interpretation-of-the-problem]().
