@@ -1,3 +1,17 @@
-<ul class="list-group">
-  <%= render partial: 'shared/list_item_links/student', collection: @students %>
-</ul>
+<h2><%= t('.heading') %></h2>
+
+<div class="row">
+  <aside class="col-sm-4 col-sm-push-8">
+    <div class="well">
+      <%= t('.help_aside_prefix_html') %>
+      <span class="label label-success mr-5">5</span><span class="label label-default">2</span>
+      <%= t('.help_aside_suffix_html') %>
+    </div>
+  </aside>
+
+  <div class="col-sm-8 col-sm-pull-4">
+    <ul class="list-group">
+      <%= render partial: 'shared/list_item_links/student', collection: @students %>
+    </ul>
+  </div>
+</div>

@@ -1,3 +1,15 @@
-<li class="list-group-item">
-  <%= link_to student.name, student_path(student), class: 'd-b' %>
-</li>
+<%# the progress calculations will generate N+1 queries, so cache me %>
+<% cache student do %>
+  <li class="list-group-item">
+    <%= link_to student.name, student_path(student), class: 'd-ib' %>
+
+    <span class="pull-right">
+      <span class="label label-success mr-5">
+        <%= student.lesson_parts.last&.lesson&.ordinal || 0 %>
+      </span>
+      <span class="label label-default">
+        <%= student.lesson_parts.last&.ordinal || 0 %>
+      </span>
+    </span>
+  </li>
+<% end %>

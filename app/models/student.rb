@@ -3,7 +3,10 @@ class Student < ApplicationRecord
   belongs_to :school_class, inverse_of: :students, touch: true
 
   has_many :completions, dependent: :destroy, inverse_of: :student
-  has_many :lesson_parts, -> { Student.order_by_lesson_ordinal }, through: :completions
+  has_many :lesson_parts, -> { Student.order_by_lesson_ordinal },
+           through: :completions,
+           after_add: ->(student, *) { student.touch },
+           after_remove: ->(student, *) { student.touch }
 
   validates :email, format: { with: /\A.+@.+\z/ }, length: { maximum: 255 }, presence: true, uniqueness: true
   validates :name, length: { maximum: 255 }, presence: true

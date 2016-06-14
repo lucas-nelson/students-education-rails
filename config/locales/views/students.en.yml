@@ -2,6 +2,11 @@ en:
   students:
     progress: Progress
 
+    index:
+      heading: All students
+      help_aside_prefix_html: A student&rsquo;s progress is listed to the right of their name.
+      help_aside_suffix_html: indicates they&rsquo;ve completed up to lesson <em>5</em>, part <em>2</em>
+
     show:
       email: Email
       set_progress: Set progress

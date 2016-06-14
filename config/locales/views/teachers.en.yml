@@ -1,4 +1,7 @@
 en:
   teachers:
+    index:
+      heading: All teachers
+
     show:
       email: Email
