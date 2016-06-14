@@ -1,5 +1,13 @@
 <h2><%= t('.taught_by', name: @teacher.name) %></h2>
 
-<ul class="list-group">
-  <%= render partial: 'shared/list_item_links/student', collection: @students %>
-</ul>
+<div class="row">
+  <aside class="col-sm-4 col-sm-push-8">
+    <%= render 'shared/student_list_help_aside' %>
+  </aside>
+
+  <div class="col-sm-8 col-sm-pull-4">
+    <ul class="list-group">
+      <%= render partial: 'shared/list_item_links/student', collection: @students %>
+    </ul>
+  </div>
+</div>
