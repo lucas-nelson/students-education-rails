@@ -1,6 +1,6 @@
 # Handles requests relating to students
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:destroy, :show, :update]
+  before_action :set_student, only: [:show]
 
   def index
     # TODO: would be nice to group them into classes

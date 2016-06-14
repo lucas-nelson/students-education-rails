@@ -3,7 +3,6 @@ module Students
   # that is: recording a Student completing a LessonPart
   class CompletedLessonPartsController < ApplicationController
     before_action :set_student
-    before_action :set_lesson_part, only: [:destroy, :show]
 
     def new
     end
@@ -24,10 +23,6 @@ module Students
         lesson_part = LessonPart.find_by!(lesson: lesson, ordinal: params[:lesson_part_ordinal])
 
         student.lesson_parts << lesson_part
-      end
-
-      def set_lesson_part
-        @lesson_part = LessonPart.find_by(id: params[:id])
       end
 
       def set_student
