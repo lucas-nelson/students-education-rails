@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-# rubocop:disable Lint/AmbiguousRegexpLiteral
 RSpec.describe 'teachers/index.html.erb', type: :view do
   it 'shows a list of teachers' do
     assign(:teachers, [FactoryGirl.create(:teacher, name: 'Teacher One'),
@@ -8,7 +7,7 @@ RSpec.describe 'teachers/index.html.erb', type: :view do
 
     render
 
-    expect(rendered).to match /Teacher One/
-    expect(rendered).to match /Teacher Two/
+    expect(rendered).to have_link 'Teacher One'
+    expect(rendered).to have_link 'Teacher Two'
   end
 end
