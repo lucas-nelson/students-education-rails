@@ -1,0 +1,2 @@
+module TeachersHelper # :nodoc:
+end
