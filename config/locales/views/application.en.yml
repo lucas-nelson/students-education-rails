@@ -1,0 +1,6 @@
+en:
+  application:
+    navbar:
+      home: Home
+      students: Students
+      teachers: Teachers
