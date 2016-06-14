@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: students-education-rails_production
-  username: students-education-rails
-  password: <%= ENV['STUDENTS-EDUCATION-RAILS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
