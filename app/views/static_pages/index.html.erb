@@ -1,1 +1,7 @@
-<h1>Students education rails</h1>
+<h1 class="page-header"><%= t('.heading') %></h1>
+
+<p class="lead">
+  <%= t('.lead_html',
+        students_link: link_to(t('.students'), students_path),
+        teachers_link: link_to(t('.teachers'), students_path)) %>
+</p>

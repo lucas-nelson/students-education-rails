@@ -1,0 +1,7 @@
+en:
+  static_pages:
+    index:
+      heading: Students education rails
+      lead_html: Start by looking at the %{students_link} or the %{teachers_link}.
+      students: students
+      teachers: teachers
