@@ -83,22 +83,32 @@ Calculating progress
 
 ### Part 1 / (2.)
 
-The JSON representation is available in an API version of this app in a different repository. See
-[USAGE.md](https://github.com/lucas-nelson/students-education-api/blob/master/USAGE.md#part-1) in the API repository
-for details.
+1. Request using curl:
 
-#### Short version
+       curl https://students-education-rails.herokuapp.com/students/1.json
 
-NOTE: the database at the '-api' endpoint is different to the '-rails' website so the data here will not match what
-is seen on the site.
+2. Observe the result:
 
-Student details:
+>     {"student":{"id":1,
+>                 "email":"bart_simpson@example.net",
+>                 "name":"Bart Simpson",
+>                 "created_at":"2016-06-14T05:46:44.581Z",
+>                 "updated_at":"2016-06-14T05:46:44.581Z",
+>                 "school_class_id":1},
+>      "progress":{}}
 
-    curl 'https://students-education-api.herokuapp.com/students/6'
+And for a student with progress:
 
-Student progress:
+       curl https://students-education-rails.herokuapp.com/students/2.json
 
-    curl 'https://students-education-api.herokuapp.com/students/6/completed_lesson_parts'
+>     {"student":{"id":2,
+>                 "email":"lisa_simpson@example.net",
+>                 "name":"Lisa Simpson",
+>                 "created_at":"2016-06-14T05:46:48.045Z",
+>                 "updated_at":"2016-06-14T05:46:48.045Z",
+>                 "school_class_id":2},
+>      "progress":{"lesson":100,
+>                  "part":3}}
 
 ### Part 2 / (1.)
 
@@ -129,6 +139,12 @@ Student progress:
 
 ## Further discussion
 
+My first pass at this exercise was to create a Rails 5 API app that communicated _json-api_ messages back and forth.
+The API side is complete and available on [github](https://github.com/lucas-nelson/students-education-api) as another
+example of my work. Building the new API stuff took longer than I expected and I ran short of time to implement an
+Ember front-end to it. Hence this repository (I started here by copying the models and schema from the v0.3 tag of
+the API repo).
+
 More detail of the process I went through in the
 [README.md](https://github.com/lucas-nelson/students-education-api/blob/master/README.md#interpretation-of-the-problem)
-in the API repository.
+in that repository.
