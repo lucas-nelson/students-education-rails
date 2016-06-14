@@ -4,6 +4,41 @@ A coding challenge to model students, teachers, lessons and students completing 
 
 Solution is a web site backed by a Rails server.
 
+## Running example
+
+https://students-education-rails.herokuapp.com/
+
+## Setup
+
+### Prerequsites
+
+A version of Ruby supported by Rails 5.0.0rc1. Ruby `2.3.1` during development.
+
+### Installation
+
+1. clone this repository, then chang into the new directory
+2. install the required gems:
+
+       bundle
+
+3. create and seed the database
+
+       bundle exec rails db:setup
+
+### Run the server
+
+    bundle exec rails s
+
+The site will be available at http://localhost:3000
+
+### Test suite
+
+    bundle exec spec
+
+### Static code analysis
+
+    bundle exec rubocop
+
 ## The challenge
 
 ### Coding Project
@@ -37,8 +72,6 @@ Calculating progress
 
 ## The result
 
-https://students-education-rails.herokuapp.com/
-
 ### Part 1 / (1.)
 
 1. Tap `Students` in the top nav
@@ -51,7 +84,8 @@ https://students-education-rails.herokuapp.com/
 ### Part 1 / (2.)
 
 The JSON representation is available in an API version of this app in a different repository. See
-[https://github.com/lucas-nelson/students-education-api/blob/master/USAGE.md#part-1]() for details.
+[USAGE.md](https://github.com/lucas-nelson/students-education-api/blob/master/USAGE.md#part-1) in the API repository
+for details.
 
 ### Part 2 / (1.)
 
@@ -82,5 +116,6 @@ The JSON representation is available in an API version of this app in a differen
 
 ## Further discussion
 
-There's more details of the process I went through in the 'api' repository. Particularly
-[https://github.com/lucas-nelson/students-education-api/blob/master/README.md#interpretation-of-the-problem]().
+More detail of the process I went through in the
+[README.md](https://github.com/lucas-nelson/students-education-api/blob/master/README.md#interpretation-of-the-problem)
+in the API repository.
