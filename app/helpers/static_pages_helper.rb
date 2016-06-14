@@ -1,0 +1,2 @@
+module StaticPagesHelper # :nodoc:
+end

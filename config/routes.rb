@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'static_pages#index'
+
   resources :completions, only: [:destroy, :show]
   resources :lesson_parts
   resources :lessons
