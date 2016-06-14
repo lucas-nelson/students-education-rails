@@ -2,10 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'students/show.html.erb', type: :view do
   let(:student) { FactoryGirl.create(:student, email: 'student_one@example.com', name: 'Student One') }
-  let(:student_with_progress) { FactoryGirl.create(:student,
-                                                   :with_lesson_parts,
-                                                   email: 'student_one@example.com',
-                                                   name: 'Student One') }
+  let(:student_with_progress) do
+    FactoryGirl.create(:student,
+                       :with_lesson_parts,
+                       email: 'student_one@example.com',
+                       name: 'Student One')
+  end
 
   it 'shows a student' do
     assign(:student, student)
