@@ -87,6 +87,19 @@ The JSON representation is available in an API version of this app in a differen
 [USAGE.md](https://github.com/lucas-nelson/students-education-api/blob/master/USAGE.md#part-1) in the API repository
 for details.
 
+#### Short version
+
+NOTE: the database at the '-api' endpoint is different to the '-rails' website so the data here will not match what
+is seen on the site.
+
+Student details:
+
+    curl 'https://students-education-api.herokuapp.com/students/6'
+
+Student progress:
+
+    curl 'https://students-education-api.herokuapp.com/students/6/completed_lesson_parts'
+
 ### Part 2 / (1.)
 
 1. Tap `Teachers` in the top nav
