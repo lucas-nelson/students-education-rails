@@ -13,10 +13,10 @@ FactoryGirl.define do
       after(:create) do |student, evaluator|
         # this is more complicated than a straight `create_list` so we can get
         # the same lesson reference in each group of three lesson parts
-        evaluator.lesson_parts_groups_count.times do
-          lesson = create(:lesson)
-          3.times do |idx|
-            student.lesson_parts << create(:lesson_part, lesson: lesson, ordinal: idx + 1)
+        evaluator.lesson_parts_groups_count.times do |idx|
+          lesson = create(:lesson, ordinal: idx + 1)
+          3.times do |parts_idx|
+            student.lesson_parts << create(:lesson_part, lesson: lesson, ordinal: parts_idx + 1)
           end
         end
       end
